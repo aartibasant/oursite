@@ -18,5 +18,9 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^test2/', include(admin.site.urls)),
+
+    ## we are trying to define how our Home should look with the url pattern below
+    # oursite.views.home: In oursite there is views. In views there is some object/file/folder called home
+    # So my code has folder oursite with file views.py with function home which will define what my home page
+    url(r'^$', 'oursite.views.home', name='home'), # Home view
 ]
