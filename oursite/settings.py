@@ -15,7 +15,6 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
@@ -25,7 +24,7 @@ SECRET_KEY = '6a&7b=#c(dl%-d3(mqr5gqei16e&&@w(%zl2xg(onx)2&st^x&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["shoptit4u.com"]
 
 
 # Application definition
@@ -55,7 +54,9 @@ ROOT_URLCONF = 'oursite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [ #defining directories to find template html files
+                  BASE_DIR + "/oursite/templates/",
+                ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
